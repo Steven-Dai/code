@@ -12,18 +12,18 @@ import com.google.zxing.qrcode.QRCodeWriter;
 
 /**
  * Hello world!
- *
+ * @author steven
  */
 public class App {
     public static void main(String[] args) {
         try {
-            createQRcode("www.baidu.com", 350, 350);
+            createQrcode("www.baidu.com", 350, 350);
         } catch (IOException | WriterException e) {
             e.printStackTrace();
         }
     }
 
-    public static void createQRcode(String text, int width, int height) throws IOException, WriterException {
+    public static void createQrcode(String text, int width, int height) throws IOException, WriterException {
         String filePath = "./QrCodeDemo.png";
         QRCodeWriter qrCodeWriter = new QRCodeWriter();
         BitMatrix bitMatrix = qrCodeWriter.encode(text, BarcodeFormat.QR_CODE, width, height);
