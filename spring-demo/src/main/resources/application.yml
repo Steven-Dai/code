@@ -1,0 +1,6 @@
+my:
+  name: ${random.int(10)}
+
+spring:
+    messages:
+        basename: i18n/messages
